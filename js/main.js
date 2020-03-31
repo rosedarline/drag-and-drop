@@ -26,12 +26,12 @@ function dragEnd() {
 
 
 function dragOver(event) {
-    event.preventDefault;
+    event.preventDefault();
 }
 
 
 function dragEnter(event) {
-    event.preventDefault;
+    event.preventDefault();
     this.className += ' hovered';
 }
 
@@ -41,7 +41,8 @@ function dragLeave() {
 }
 
 
-function dragDrop() {
+function dragDrop(event) {
+    event.preventDefault();
     this.className = 'empty';
     this.append(fill);
 }
